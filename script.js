@@ -47,32 +47,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Active Link Highlighting ===
     const sections = document.querySelectorAll('section');
     const navItems = document.querySelectorAll('.nav-link');
+    const isServicePage = window.location.pathname.includes('/services/');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '-80px 0px 0px 0px',
-        threshold: 0.3
-    };
+    if (isServicePage) {
+        const servicesLink = document.querySelector('.nav-link[href$="#services"]');
+        if (servicesLink) {
+            navItems.forEach(link => link.classList.remove('active'));
+            servicesLink.classList.add('active');
+        }
+    } else {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-80px 0px 0px 0px',
+            threshold: 0.3
+        };
 
-    const sectionObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const currentId = entry.target.getAttribute('id');
-                navItems.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${currentId}`) {
-                        link.classList.add('active');
-                    }
-                });
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    navItems.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${currentId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            if (section.getAttribute('id')) {
+                sectionObserver.observe(section);
             }
         });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        if (section.getAttribute('id')) {
-            sectionObserver.observe(section);
-        }
-    });
+    }
 
     // === Navbar Scroll Effects ===
     const navbar = document.getElementById('navbar') || document.querySelector('.navbar');
@@ -210,8 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const submitBtn = this.querySelector('button[type="submit"]');
             if (submitBtn) {
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-                submitBtn.style.opacity = '0.8';
-                submitBtn.style.pointerEvents = 'none';
+                submitBtn.classList.add('is-loading');
             }
         });
     }
