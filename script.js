@@ -136,50 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
         revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    // === Animated Counter for Stats ===
-    const stats = document.querySelectorAll('.stat-item h3');
-
-    if (stats.length > 0) {
-        const counterObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    counterObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        stats.forEach(stat => counterObserver.observe(stat));
-    }
-
-    function animateCounter(element) {
-        const text = element.textContent.trim();
-        const match = text.match(/^(\d+)(.*)$/);
-        if (!match) return;
-
-        const target = parseInt(match[1], 10);
-        const suffix = match[2]; // e.g., "+", "/7"
-        const duration = 1500;
-        const startTime = performance.now();
-
-        function updateCounter(currentTime) {
-            const elapsed = currentTime - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-
-            // Ease-out cubic
-            const eased = 1 - Math.pow(1 - progress, 3);
-            const current = Math.round(eased * target);
-
-            element.textContent = current + suffix;
-
-            if (progress < 1) {
-                requestAnimationFrame(updateCounter);
-            }
-        }
-
-        requestAnimationFrame(updateCounter);
-    }
-
     // === Service Card Tilt Effect (Desktop only) ===
     if (window.matchMedia('(min-width: 769px)').matches) {
         const cards = document.querySelectorAll('.service-card');
