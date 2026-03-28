@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C63FF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#221F3B" stop-opacity="0.04"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#221F3B"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF9800"/>
+      <stop offset="100%" stop-color="#FF6D00"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background shapes -->
+  <circle cx="300" cy="225" r="200" fill="url(#bg1)"/>
+  <circle cx="480" cy="120" r="100" fill="url(#bg1)"/>
+  <circle cx="100" cy="350" r="80" fill="url(#bg1)"/>
+
+  <!-- Central globe/network -->
+  <circle cx="300" cy="210" r="130" fill="none" stroke="#6C63FF" stroke-width="1" opacity="0.12"/>
+  <circle cx="300" cy="210" r="100" fill="none" stroke="#6C63FF" stroke-width="1" opacity="0.08"/>
+  <ellipse cx="300" cy="210" rx="130" ry="50" fill="none" stroke="#6C63FF" stroke-width="0.8" opacity="0.1"/>
+  <ellipse cx="300" cy="210" rx="100" ry="80" fill="none" stroke="#6C63FF" stroke-width="0.8" opacity="0.08" transform="rotate(30 300 210)"/>
+  <ellipse cx="300" cy="210" rx="100" ry="80" fill="none" stroke="#6C63FF" stroke-width="0.8" opacity="0.08" transform="rotate(-30 300 210)"/>
+
+  <!-- Network nodes on globe -->
+  <circle cx="210" cy="160" r="10" fill="white" stroke="#6C63FF" stroke-width="2"/>
+  <circle cx="210" cy="160" r="4" fill="#6C63FF"/>
+
+  <circle cx="360" cy="140" r="10" fill="white" stroke="#6C63FF" stroke-width="2"/>
+  <circle cx="360" cy="140" r="4" fill="#6C63FF"/>
+
+  <circle cx="400" cy="230" r="10" fill="white" stroke="#FF9800" stroke-width="2"/>
+  <circle cx="400" cy="230" r="4" fill="#FF9800"/>
+
+  <circle cx="250" cy="290" r="10" fill="white" stroke="#6C63FF" stroke-width="2"/>
+  <circle cx="250" cy="290" r="4" fill="#6C63FF"/>
+
+  <circle cx="340" cy="310" r="10" fill="white" stroke="#FF9800" stroke-width="2"/>
+  <circle cx="340" cy="310" r="4" fill="#FF9800"/>
+
+  <circle cx="190" cy="240" r="10" fill="white" stroke="#6C63FF" stroke-width="2"/>
+  <circle cx="190" cy="240" r="4" fill="#6C63FF"/>
+
+  <!-- Connection lines between nodes -->
+  <line x1="220" y1="162" x2="350" y2="142" stroke="#6C63FF" stroke-width="1.2" opacity="0.2"/>
+  <line x1="365" y1="150" x2="398" y2="222" stroke="#6C63FF" stroke-width="1.2" opacity="0.2"/>
+  <line x1="395" y1="238" x2="348" y2="305" stroke="#FF9800" stroke-width="1.2" opacity="0.2"/>
+  <line x1="335" y1="305" x2="256" y2="288" stroke="#6C63FF" stroke-width="1.2" opacity="0.15"/>
+  <line x1="245" y1="285" x2="196" y2="248" stroke="#6C63FF" stroke-width="1.2" opacity="0.2"/>
+  <line x1="198" y1="234" x2="212" y2="168" stroke="#6C63FF" stroke-width="1.2" opacity="0.15"/>
+  <line x1="218" y1="164" x2="392" y2="228" stroke="#6C63FF" stroke-width="0.8" opacity="0.1"/>
+  <line x1="356" y1="148" x2="254" y2="286" stroke="#6C63FF" stroke-width="0.8" opacity="0.1"/>
+
+  <!-- Floating card - top right: certificate/checkmark -->
+  <rect x="440" y="50" width="130" height="90" rx="14" fill="white" stroke="#e8e8f0" stroke-width="1.5"/>
+  <circle cx="475" cy="80" r="16" fill="#6C63FF" opacity="0.1"/>
+  <path d="M468 80 l5 5 10-10" stroke="#6C63FF" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="500" y="74" width="52" height="6" rx="3" fill="#221F3B" opacity="0.5"/>
+  <rect x="500" y="86" width="36" height="5" rx="2.5" fill="#8888a0" opacity="0.3"/>
+  <rect x="458" y="112" width="95" height="6" rx="3" fill="#e8e8f0"/>
+  <rect x="458" y="112" width="75" height="6" rx="3" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Floating card - bottom left: people/team -->
+  <rect x="40" y="300" width="120" height="90" rx="14" fill="white" stroke="#e8e8f0" stroke-width="1.5"/>
+  <!-- Team avatars -->
+  <circle cx="72" cy="335" r="12" fill="#6C63FF" opacity="0.15"/>
+  <circle cx="72" cy="330" r="6" fill="#6C63FF" opacity="0.3"/>
+  <circle cx="100" cy="335" r="12" fill="#FF9800" opacity="0.15"/>
+  <circle cx="100" cy="330" r="6" fill="#FF9800" opacity="0.3"/>
+  <circle cx="128" cy="335" r="12" fill="#6C63FF" opacity="0.15"/>
+  <circle cx="128" cy="330" r="6" fill="#6C63FF" opacity="0.3"/>
+  <rect x="58" y="358" width="84" height="5" rx="2.5" fill="#221F3B" opacity="0.4"/>
+  <rect x="68" y="370" width="64" height="4" rx="2" fill="#8888a0" opacity="0.25"/>
+
+  <!-- Floating card - top left: data/analytics -->
+  <rect x="50" y="80" width="110" height="80" rx="14" fill="white" stroke="#e8e8f0" stroke-width="1.5"/>
+  <!-- Mini bar chart -->
+  <rect x="68" y="120" width="10" height="24" rx="3" fill="#6C63FF" opacity="0.3"/>
+  <rect x="84" y="112" width="10" height="32" rx="3" fill="#6C63FF" opacity="0.5"/>
+  <rect x="100" y="104" width="10" height="40" rx="3" fill="url(#accent)" opacity="0.7"/>
+  <rect x="116" y="108" width="10" height="36" rx="3" fill="#FF9800" opacity="0.5"/>
+  <rect x="68" y="98" width="60" height="5" rx="2.5" fill="#221F3B" opacity="0.4"/>
+
+  <!-- Floating card - bottom right: terminal/code -->
+  <rect x="430" y="300" width="130" height="80" rx="14" fill="white" stroke="#e8e8f0" stroke-width="1.5"/>
+  <rect x="445" y="320" width="6" height="6" rx="3" fill="#FF9800" opacity="0.7"/>
+  <rect x="458" y="320" width="60" height="6" rx="3" fill="#221F3B" opacity="0.35"/>
+  <rect x="445" y="334" width="6" height="6" rx="3" fill="#6C63FF" opacity="0.7"/>
+  <rect x="458" y="334" width="80" height="6" rx="3" fill="#221F3B" opacity="0.25"/>
+  <rect x="445" y="348" width="6" height="6" rx="3" fill="#6C63FF" opacity="0.5"/>
+  <rect x="458" y="348" width="48" height="6" rx="3" fill="#221F3B" opacity="0.2"/>
+  <rect x="445" y="362" width="6" height="6" rx="3" fill="#FF9800" opacity="0.5"/>
+  <rect x="458" y="362" width="70" height="6" rx="3" fill="#221F3B" opacity="0.15"/>
+
+  <!-- Decorative dots -->
+  <circle cx="170" cy="80" r="3" fill="#6C63FF" opacity="0.2"/>
+  <circle cx="440" cy="180" r="4" fill="#FF9800" opacity="0.2"/>
+  <circle cx="160" cy="370" r="3" fill="#6C63FF" opacity="0.15"/>
+  <circle cx="530" cy="260" r="3" fill="#6C63FF" opacity="0.2"/>
+  <circle cx="300" cy="60" r="4" fill="#FF9800" opacity="0.15"/>
+  <circle cx="240" cy="390" r="3" fill="#6C63FF" opacity="0.12"/>
+
+  <!-- Signal/pulse rings around center -->
+  <circle cx="300" cy="210" r="155" fill="none" stroke="#6C63FF" stroke-width="0.5" opacity="0.06" stroke-dasharray="8 6"/>
+  <circle cx="300" cy="210" r="175" fill="none" stroke="#6C63FF" stroke-width="0.5" opacity="0.04" stroke-dasharray="4 8"/>
+</svg>
