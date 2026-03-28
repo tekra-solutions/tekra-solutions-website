@@ -196,7 +196,7 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%;
     top: 0;
     z-index: 1000;
-    height: 84px;
+    height: 90px;
     display: flex;
     align-items: center;
     transition: var(--transition);
@@ -204,7 +204,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .navbar.scrolled {
-    height: 74px;
+    height: 78px;
     box-shadow: 0 1px 20px rgba(0,0,0,0.06);
     border-bottom: 1px solid var(--border);
 }
@@ -222,18 +222,18 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .logo img {
-    height: 54px;
+    height: 70px;
     width: auto;
     transition: var(--transition-fast);
     image-rendering: -webkit-optimize-contrast;
     image-rendering: crisp-edges;
     display: block;
-    border-radius: 8px;
     object-fit: contain;
 }
 
 .navbar.scrolled .logo img {
-    height: 46px;
+    height: 58px;
+    width: auto;
 }
 
 .nav-menu {
@@ -897,10 +897,9 @@ footer {
 }
 
 .footer-logo img {
-    height: 56px;
+    height: 70px;
     width: auto;
     display: block;
-    border-radius: 8px;
     object-fit: contain;
 }
 
