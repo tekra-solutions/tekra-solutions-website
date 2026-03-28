@@ -15,7 +15,7 @@
     --dark-text: #2d2d3f;
     --body-text: #5a5a6e;
     --muted: #8888a0;
-    --light-bg: #f7f8fc;
+    --light-bg: #f0f1f8;
     --card-bg: #ffffff;
     --border: #e8e8f0;
     --white: #ffffff;
@@ -332,7 +332,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* === Hero Section === */
 .hero {
     padding: 130px 0 80px;
-    background: var(--light-bg);
+    background: linear-gradient(180deg, #f0f1f8 0%, #e8e9f4 100%);
     min-height: 88vh;
     display: flex;
     align-items: center;
@@ -596,7 +596,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* === About Section === */
 .about {
     padding: 100px 0;
-    background: var(--light-bg);
+    background: linear-gradient(180deg, #f0f1f8 0%, #e8e9f4 100%);
     position: relative;
     overflow: hidden;
 }
@@ -850,7 +850,7 @@ img { max-width: 100%; height: auto; display: block; }
     font-family: inherit;
     font-size: 0.95rem;
     transition: var(--transition);
-    background: var(--light-bg);
+    background: #f7f8fc;
     color: var(--dark-text);
 }
 
