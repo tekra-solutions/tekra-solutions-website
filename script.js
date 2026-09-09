@@ -177,4 +177,72 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // === Scroll Progress Bar ===
+    const scrollProgress = document.getElementById('scrollProgress');
+    if (scrollProgress) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            scrollProgress.style.width = `${progress}%`;
+        }, { passive: true });
+    }
+
+    // === Animated Stat Counters ===
+    const statNumbers = document.querySelectorAll('.stat-number');
+    if (statNumbers.length > 0) {
+        const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+        const animateCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-target'), 10);
+            if (isNaN(target)) return;
+            const duration = 1800;
+            const start = performance.now();
+
+            const step = (now) => {
+                const elapsed = now - start;
+                const progress = Math.min(elapsed / duration, 1);
+                el.textContent = Math.floor(easeOut(progress) * target);
+                if (progress < 1) requestAnimationFrame(step);
+                else el.textContent = target;
+            };
+
+            requestAnimationFrame(step);
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(el => counterObserver.observe(el));
+    }
+
+    // === FAQ Accordion ===
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        if (!btn) return;
+
+        btn.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+
+            // Close all other items
+            faqItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('open');
+                    const otherBtn = other.querySelector('.faq-question');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            item.classList.toggle('open', !isOpen);
+            btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+    });
+
 });
