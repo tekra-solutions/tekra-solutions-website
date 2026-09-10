@@ -532,8 +532,6 @@ img { max-width: 100%; height: auto; display: block; }
     }
 }
 
-
-
 /* === Section Headers === */
 .section-header {
     text-align: center;
@@ -977,7 +975,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .why-card:hover .why-card-icon i,
-.why-card-icon .icon {
+.why-card:hover .why-card-icon .icon {
     color: var(--white);
 }
 
@@ -1805,107 +1803,6 @@ textarea:focus-visible {
 }
 
 /* ============================================
-   STATS SECTION
-   ============================================ */
-.stats-section {
-    background: linear-gradient(135deg, var(--primary) 0%, #1a1730 60%, var(--dark) 100%);
-    padding: 70px 0;
-    position: relative;
-    overflow: hidden;
-}
-
-.stats-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(108, 99, 255, 0.15) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.stats-section::after {
-    content: '';
-    position: absolute;
-    bottom: -50%;
-    right: -10%;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(255, 152, 0, 0.1) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    position: relative;
-    z-index: 1;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 40px 24px;
-    position: relative;
-    transition: var(--transition);
-}
-
-.stat-item:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60%;
-    width: 1px;
-    background: rgba(255, 255, 255, 0.12);
-}
-
-.stat-item:hover {
-    transform: translateY(-4px);
-}
-
-.stat-icon {
-    font-size: 1.8rem;
-    color: var(--accent-light);
-    margin-bottom: 16px;
-    opacity: 0.85;
-}
-
-.stat-value {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2px;
-    margin-bottom: 10px;
-}
-
-.stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1;
-    letter-spacing: -1px;
-}
-
-.stat-suffix {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--accent-light);
-    line-height: 1;
-    margin-top: 4px;
-}
-
-.stat-label {
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.65);
-    text-transform: uppercase;
-    letter-spacing: 0.8px;
-}
-
-/* ============================================
    PROCESS SECTION
    ============================================ */
 .process-section {
@@ -2008,137 +1905,6 @@ textarea:focus-visible {
     font-size: 0.88rem;
     color: var(--body-text);
     line-height: 1.65;
-}
-
-/* ============================================
-   TESTIMONIALS SECTION
-   ============================================ */
-.testimonials-section {
-    padding: 110px 0;
-    background: var(--white);
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonials-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(108, 99, 255, 0.04) 0%, transparent 70%);
-    pointer-events: none;
-}
-
-.testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-    margin-top: 60px;
-}
-
-.testimonial-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 36px 32px;
-    box-shadow: var(--shadow-md);
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonial-card::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent), var(--orange));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.testimonial-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-color: rgba(108, 99, 255, 0.2);
-}
-
-.testimonial-card:hover::before {
-    transform: scaleX(1);
-}
-
-.testimonial-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.testimonial-stars {
-    display: flex;
-    gap: 4px;
-    color: #FFB800;
-    font-size: 0.85rem;
-}
-
-.testimonial-quote-icon {
-    font-size: 2rem;
-    color: rgba(108, 99, 255, 0.12);
-}
-
-.testimonial-text {
-    font-size: 0.95rem;
-    color: var(--body-text);
-    line-height: 1.75;
-    flex: 1;
-    font-style: italic;
-}
-
-.testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-}
-
-.testimonial-avatar {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
-}
-
-.testimonial-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.testimonial-info strong {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: var(--dark-text);
-}
-
-.testimonial-info span {
-    font-size: 0.8rem;
-    color: var(--muted);
 }
 
 /* ============================================
@@ -2326,10 +2092,6 @@ textarea:focus-visible {
         display: none;
     }
 
-    .testimonials-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     .faq-inner {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -2341,55 +2103,23 @@ textarea:focus-visible {
 }
 
 @media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stat-item:nth-child(2)::after {
-        display: none;
-    }
-
-    .stat-item:nth-child(odd):not(:last-child)::after {
-        display: none;
-    }
-
-    .stat-item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .stat-item:nth-child(n)::after {
-        display: none;
-    }
 
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .testimonials-grid {
-        grid-template-columns: 1fr;
     }
 
     .faq-left h2 {
         font-size: 1.7rem;
     }
 
-    .stat-number {
-        font-size: 2.4rem;
-    }
 }
 
 @media (max-width: 480px) {
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     .process-steps {
         grid-template-columns: 1fr;
     }
 
-    .stat-number {
-        font-size: 2rem;
-    }
 }
 
 /* === Skip to content (keyboard accessibility) === */
@@ -2420,4 +2150,247 @@ textarea:focus-visible {
     display: inline-block;
     vertical-align: -0.125em;
     flex-shrink: 0;
+}
+
+/* ============================================
+   ICON RENDERING FIXES
+   SVG icons need explicit box sizing; font-size
+   alone (which sized the old webfont glyphs) has
+   no effect on an <svg> with width/height set.
+   ============================================ */
+
+/* Service card icon tiles */
+.service-card .card-icon .icon {
+    width: 52px;
+    height: 52px;
+    padding: 13px;
+}
+
+/* Process step circles */
+.step-icon-wrapper .icon {
+    width: 26px;
+    height: 26px;
+}
+
+/* Why-choose-us icon tiles */
+.why-card-icon .icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Section tag pills — small but must stay legible */
+.section-tag .icon {
+    width: 13px;
+    height: 13px;
+    opacity: 0.9;
+}
+
+/* Hero trust bar */
+.hero-trust-item .icon {
+    width: 15px;
+    height: 15px;
+}
+
+/* About feature bullets */
+.about-feature-item .icon {
+    width: 26px;
+    height: 26px;
+    padding: 6px;
+}
+
+/* Inline arrows in links and buttons */
+.card-footer .icon,
+.btn .icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* ============================================
+   BUTTON REFINEMENTS
+   ============================================ */
+
+/* The shimmer overlay sat above the label and swallowed pointer
+   events on the icon; keep it purely decorative. */
+.btn::after {
+    pointer-events: none;
+}
+
+.btn > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Visible keyboard focus for every interactive control */
+.btn:focus-visible,
+.nav-link:focus-visible,
+.card-footer:focus-visible,
+.faq-question:focus-visible,
+.scroll-top:focus-visible,
+.footer-social-link:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+    border-radius: var(--radius-sm);
+}
+
+/* On the dark hero, the navy primary button reads as low-contrast.
+   Use the accent so the main call to action actually stands out. */
+.hero .btn-primary {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    box-shadow: 0 6px 22px rgba(108, 99, 255, 0.45);
+}
+
+.hero .btn-primary:hover {
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.55);
+}
+
+/* Match the two hero buttons in height — the outlined one carries a
+   2px border, so it rendered 4px taller than the filled one. */
+.hero .btn-primary {
+    border: 2px solid transparent;
+}
+
+/* Nudge the arrow on hover for a bit of affordance */
+.btn .icon {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover .icon {
+    transform: translateX(3px);
+}
+
+.btn-secondary-hero:hover .icon,
+.scroll-top:hover .icon {
+    transform: none;
+}
+
+/* ============================================
+   PROCESS SECTION POLISH
+   ============================================ */
+
+/* Centred body copy in a narrow column produced very ragged edges
+   across five cards. Left-align the paragraph, keep the icon and
+   heading centred. */
+.process-step p {
+    text-align: left;
+}
+
+.process-step h3 {
+    min-height: 2.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Equal-height cards so the row reads as one band */
+.process-steps {
+    align-items: stretch;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+/* Give the number badge more separation from the card edge */
+.step-number {
+    top: -12px;
+    padding: 5px 14px;
+    box-shadow: 0 4px 12px rgba(34, 31, 59, 0.25);
+}
+
+/* ============================================
+   SERVICE CARD ICON TILES
+   The hand-drawn .service-svg icons sat on a 56px
+   tile with 10px padding and read as thin and faint
+   at that size. Larger tile, more drawing room, and
+   a stronger tint give them presence.
+   ============================================ */
+.service-card .card-icon .service-svg {
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(108, 99, 255, 0.16), rgba(108, 99, 255, 0.07));
+    stroke-width: 0;
+}
+
+/* Thicken the strokes so the glyph holds up at small size */
+.service-card .card-icon .service-svg [stroke-width="2.5"] { stroke-width: 3; }
+.service-card .card-icon .service-svg [stroke-width="2"]   { stroke-width: 2.6; }
+
+/* The faint ghost/echo paths muddied the shape at 60px */
+.service-card .card-icon .service-svg [opacity="0.3"] { opacity: 0.45; }
+.service-card .card-icon .service-svg [opacity="0.5"] { opacity: 0.65; }
+
+.service-card:hover .card-icon .service-svg {
+    transform: scale(1.06) rotate(-2deg);
+}
+
+/* ============================================
+   SERVICE CARD ALIGNMENT
+   Card descriptions vary in length, which left the
+   "Learn More" links floating at different heights
+   across the row. Push the footer to the bottom so
+   they line up.
+   ============================================ */
+.service-card .card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card .card-content p {
+    flex-grow: 1;
+}
+
+.service-card .card-footer {
+    margin-top: auto;
+}
+
+/* Keep the two-line headings from shifting the copy below them */
+.service-card .card-content h3 {
+    min-height: 2.6em;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Contact details are actionable — make phone and email tappable */
+.info-value-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.info-value-link:hover,
+.info-value-link:focus-visible {
+    border-bottom-color: currentColor;
+}
+
+/* ============================================
+   PREVENT HORIZONTAL OVERFLOW
+   .reveal-right starts at translateX(40px), which
+   pushed content past the viewport edge and created
+   a horizontal scrollbar until the element animated
+   in. Clip at the root so off-screen entry states
+   can never widen the page.
+   ============================================ */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* On narrow screens the horizontal slide has no room;
+   fade straight up instead. */
+@media (max-width: 900px) {
+    .reveal-left,
+    .reveal-right {
+        transform: translateY(24px);
+    }
+
+    .reveal-left.visible,
+    .reveal-right.visible {
+        transform: translateY(0);
+    }
 }
