@@ -515,7 +515,8 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 500;
 }
 
-.hero-trust-item i {
+.hero-trust-item i,
+.hero-trust-item .icon {
     color: var(--accent-light);
     font-size: 0.9rem;
 }
@@ -605,9 +606,12 @@ img { max-width: 100%; height: auto; display: block; }
     justify-content: flex-start;
 }
 
-.service-card .card-icon i {
+.service-card .card-icon i,
+.service-card .card-icon .icon {
     width: 56px;
     height: 56px;
+    padding: 16px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,7 +632,8 @@ img { max-width: 100%; height: auto; display: block; }
     transition: var(--transition);
 }
 
-.service-card:hover .card-icon i {
+.service-card:hover .card-icon i,
+.service-card:hover .card-icon .icon {
     background: linear-gradient(135deg, var(--accent), var(--primary));
     color: var(--white);
     transform: scale(1.08);
@@ -678,7 +683,8 @@ img { max-width: 100%; height: auto; display: block; }
     margin-top: auto;
 }
 
-.service-card .card-footer i {
+.service-card .card-footer i,
+.service-card .card-footer .icon {
     transition: var(--transition);
     font-size: 0.8rem;
 }
@@ -687,7 +693,8 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--primary);
 }
 
-.service-card:hover .card-footer i {
+.service-card:hover .card-footer i,
+.service-card:hover .card-footer .icon {
     transform: translateX(4px);
 }
 
@@ -796,11 +803,14 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--dark-text);
 }
 
-.about-feature-item i {
+.about-feature-item i,
+.about-feature-item .icon {
     color: var(--accent);
     font-size: 0.9rem;
     width: 28px;
     height: 28px;
+    padding: 7px;
+    box-sizing: border-box;
     background: var(--accent-glow);
     border-radius: 50%;
     display: flex;
@@ -882,7 +892,8 @@ img { max-width: 100%; height: auto; display: block; }
     color: var(--dark-text);
 }
 
-.feature-list i {
+.feature-list i,
+.feature-list .icon {
     color: var(--orange);
 }
 
@@ -958,13 +969,15 @@ img { max-width: 100%; height: auto; display: block; }
     box-shadow: 0 8px 24px var(--accent-glow);
 }
 
-.why-card-icon i {
+.why-card-icon i,
+.why-card-icon .icon {
     font-size: 1.5rem;
     color: var(--accent);
     transition: var(--transition);
 }
 
-.why-card:hover .why-card-icon i {
+.why-card:hover .why-card-icon i,
+.why-card-icon .icon {
     color: var(--white);
 }
 
@@ -1384,6 +1397,8 @@ textarea:focus-visible {
 .page-header .breadcrumb .separator {
     color: rgba(255,255,255,0.3);
     font-size: 0.7rem;
+    width: 0.7em;
+    height: 0.7em;
 }
 
 .page-header .breadcrumb .current {
@@ -1500,7 +1515,8 @@ textarea:focus-visible {
     color: var(--dark-text);
 }
 
-.service-cert-note i {
+.service-cert-note i,
+.service-cert-note .icon {
     color: var(--accent);
     font-size: 1.2rem;
     flex-shrink: 0;
@@ -2394,4 +2410,14 @@ textarea:focus-visible {
     top: 16px;
     outline: 3px solid var(--white);
     outline-offset: 2px;
+}
+
+/* === Inline SVG icons (replaces Font Awesome) === */
+.icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    display: inline-block;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
 }
