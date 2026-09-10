@@ -5,10 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrative Support - Tekra Solutions</title>
     <meta name="description" content="Professional support services to streamline operations and enhance organizational efficiency.">
+    <link rel="canonical" href="https://www.tekrasolution.com/services/administrative-support.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tekrasolution.com/services/administrative-support.html">
+    <meta property="og:title" content="Administrative Support - Tekra Solutions">
+    <meta property="og:description" content="Professional support services to streamline operations and enhance organizational efficiency.">
+    <meta property="og:image" content="https://www.tekrasolution.com/images/og-image.png">
+    <meta property="og:site_name" content="Tekra Solutions">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Administrative Support - Tekra Solutions">
+    <meta name="twitter:description" content="Professional support services to streamline operations and enhance organizational efficiency.">
+    <meta name="twitter:image" content="https://www.tekrasolution.com/images/og-image.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="icon" href="../images/favicon.ico" sizes="32x32 64x64">
     <link rel="icon" type="image/png" sizes="192x192" href="../images/favicon.png">
@@ -16,11 +31,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav class="navbar">
         <div class="container">
-            <a href="../index.html" class="logo"><img src="../images/tekra-light.svg" alt="Tekra Solutions" class="logo-light"><img src="../images/tekra-dark.svg" alt="Tekra Solutions" class="logo-dark"></a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-            <ul class="nav-menu">
+            <a href="../index.html" class="logo"><img src="../images/tekra-light.svg" alt="Tekra Solutions" class="logo-light" width="143" height="70"><img src="../images/tekra-dark.svg" alt="Tekra Solutions" class="logo-dark" width="143" height="70"></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html#home" class="nav-link">Home</a></li>
                 <li><a href="../index.html#services" class="nav-link">Services</a></li>
                 <li><a href="../index.html#about" class="nav-link">About Us</a></li>
@@ -29,9 +45,11 @@
         </div>
     </nav>
 
+    <main id="main-content">
+
     <section class="page-header">
         <div class="container">
-            <nav class="breadcrumb"><a href="../index.html">Home</a><i class="fas fa-chevron-right separator"></i><a href="../index.html#services">Services</a><i class="fas fa-chevron-right separator"></i><span class="current">Administrative Support</span></nav>
+            <nav class="breadcrumb"><a href="../index.html">Home</a><svg class="icon separator" aria-hidden="true" focusable="false"><use href="../images/icons.svg#i-chevron-right"></use></svg><a href="../index.html#services">Services</a><svg class="icon separator" aria-hidden="true" focusable="false"><use href="../images/icons.svg#i-chevron-right"></use></svg><span class="current">Administrative Support</span></nav>
             <h1>Administrative Support</h1>
             <p class="page-subtitle">Professional support services for operational excellence</p>
         </div>
@@ -45,17 +63,20 @@
                 <p>You can find administrative support services places as an administrative assistant, human resources assistant, office clerk, receptionist, secretary, or a similar position. You will usually need good communication skills, as well as capability in keyboarding. You can presume to work 40 hours per week; however, this may vary provisional on your work environment. Employment situations might include healthcare amenities, offices, attorney offices or governmental organizations. You could even pick to be self-employed and work on a self-employed or contract basis.</p>
                 <p><strong>Key Services:</strong> Support of daily maintenance and operation, Hardware and software management, Procurement management, Digital library services, Compliant documentation and reporting, Web hosting and cloud services, Website development</p>
                 <a href="../index.html#contact" class="btn btn-primary">Get a Quote</a>
-                <a href="../index.html#services" class="back-link"><i class="fas fa-arrow-left"></i> Back to All Services</a>
+                <a href="../index.html#services" class="back-link"><svg class="icon" aria-hidden="true" focusable="false"><use href="../images/icons.svg#i-arrow-left"></use></svg> Back to All Services</a>
                 <!-- NWBOC certification note removed; should only appear once site-wide -->
             </div>
         </div>
     </section>
 
-    <footer>
+    
+    </main>
+
+<footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <a href="../index.html"><img src="../images/tekra-light.svg" alt="Tekra Solution"></a>
+                    <a href="../index.html"><img src="../images/tekra-light.svg" alt="Tekra Solution" width="143" height="70"></a>
                     <p>Providing Information Technology Services Around The World.</p>
                 </div>
                 <div class="footer-links">
@@ -72,6 +93,6 @@
         </div>
     </footer>
     <script src="../script.js"></script>
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><svg class="icon" aria-hidden="true" focusable="false"><use href="../images/icons.svg#i-arrow-up"></use></svg></button>
 </body>
 </html>
