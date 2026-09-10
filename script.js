@@ -9,18 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    const setMenuOpen = (open) => {
+        if (!mobileMenu || !navMenu) return;
+        mobileMenu.classList.toggle('active', open);
+        navMenu.classList.toggle('active', open);
+        mobileMenu.setAttribute('aria-expanded', String(open));
+    };
+
     if (mobileMenu) {
         mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navMenu.classList.toggle('active');
+            setMenuOpen(!navMenu.classList.contains('active'));
         });
     }
 
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (mobileMenu) mobileMenu.classList.remove('active');
-            if (navMenu) navMenu.classList.remove('active');
-        });
+        link.addEventListener('click', () => setMenuOpen(false));
+    });
+
+    // Close the menu on Escape and return focus to the toggle
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+            setMenuOpen(false);
+            mobileMenu.focus();
+        }
     });
 
     // === Smooth Scrolling ===

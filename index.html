@@ -12,24 +12,76 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 
+    <link rel="canonical" href="https://www.tekrasolution.com/">
+
     <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.tekrasolution.com/">
     <meta property="og:title" content="Tekra Solutions — IT Services Worldwide">
     <meta property="og:description" content="We deliver innovative tech solutions to help your business grow and succeed in the digital age.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="images/favicon.png">
+    <meta property="og:image" content="https://www.tekrasolution.com/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Tekra Solutions">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tekra Solutions — IT Services Worldwide">
+    <meta name="twitter:description" content="We deliver innovative tech solutions to help your business grow and succeed in the digital age.">
+    <meta name="twitter:image" content="https://www.tekrasolution.com/images/og-image.png">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Tekra Solutions",
+      "url": "https://www.tekrasolution.com/",
+      "logo": "https://www.tekrasolution.com/images/tekra-light.svg",
+      "image": "https://www.tekrasolution.com/images/og-image.png",
+      "description": "Tekra Solutions delivers innovative Information Technology services around the world \u2014 Cyber Security, GIS, Business Intelligence, Application Development, and more.",
+      "telephone": "+1-913-267-9039",
+      "email": "info@tekrasolutions.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "14705 Farley Street",
+        "addressLocality": "Overland Park",
+        "addressRegion": "KS",
+        "postalCode": "66221",
+        "addressCountry": "US"
+      },
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "IT Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cyber Security", "url": "https://www.tekrasolution.com/services/cyber-security.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Geographic Information Systems", "url": "https://www.tekrasolution.com/services/geographic-information-systems.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Intelligence Systems", "url": "https://www.tekrasolution.com/services/business-intelligence-systems.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Application Development", "url": "https://www.tekrasolution.com/services/application-development.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Data Warehousing", "url": "https://www.tekrasolution.com/services/data-warehousing.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Health Analytics", "url": "https://www.tekrasolution.com/services/health-analytics.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Program & Project Management", "url": "https://www.tekrasolution.com/services/program-project-management.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Administrative Support", "url": "https://www.tekrasolution.com/services/administrative-support.html" } }
+        ]
+      }
+    }
+    </script>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
@@ -38,15 +90,15 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="images/tekra-light.svg" alt="Tekra Solutions" class="logo-light">
-                <img src="images/tekra-dark.svg" alt="Tekra Solutions" class="logo-dark">
+                <img src="images/tekra-light.svg" alt="Tekra Solutions" class="logo-light" width="143" height="70">
+                <img src="images/tekra-dark.svg" alt="Tekra Solutions" class="logo-dark" width="143" height="70">
             </a>
-            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">
+            <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#about" class="nav-link">About Us</a></li>
@@ -54,6 +106,8 @@
             </ul>
         </div>
     </nav>
+
+    <main id="main-content">
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -329,7 +383,7 @@
         <div class="container about-content">
             <div class="about-image reveal-left">
                 <div class="about-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Tekra Solutions Technology" class="about-img">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="Tekra Solutions Technology" class="about-img" width="800" height="533" loading="lazy" decoding="async">
                     <div class="about-image-accent"></div>
                 </div>
             </div>
@@ -369,14 +423,14 @@
             <div class="certifications-grid reveal">
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="images/NWBOC%20MBE%20CERTIFIED.png" alt="NWBOC MBE Certified">
+                        <img src="images/nwboc-mbe-certified.png" alt="NWBOC MBE Certified" width="330" height="173" loading="lazy" decoding="async">
                     </div>
                     <h3>NWBOC MBE Certified</h3>
                     <p>Certified as a Minority Business Enterprise (MBE) by the National Women Business Owners Corporation (NWBOC).</p>
                 </div>
                 <div class="certification-card">
                     <div class="certification-image">
-                        <img src="images/wbenc-certified.png" alt="WBENC Certified">
+                        <img src="images/wbenc-certified.png" alt="WBENC Certified" width="330" height="187" loading="lazy" decoding="async">
                     </div>
                     <h3>WBENC Certified</h3>
                     <p>Certified by the Women's Business Enterprise National Council (WBENC), the largest certifier of women-owned businesses in the U.S.</p>
@@ -641,12 +695,15 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    
+    </main>
+
+<footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
                     <a href="#">
-                        <img src="images/tekra-light.svg" alt="Tekra Solutions">
+                        <img src="images/tekra-light.svg" alt="Tekra Solutions" width="143" height="70">
                     </a>
                     <p>Providing Information Technology Services Around The World. Your trusted partner for mission-critical digital transformation.</p>
                     <div class="footer-social">

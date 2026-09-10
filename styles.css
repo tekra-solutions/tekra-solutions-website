@@ -2375,3 +2375,23 @@ textarea:focus-visible {
         font-size: 2rem;
     }
 }
+
+/* === Skip to content (keyboard accessibility) === */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 16px;
+    z-index: 10000;
+    padding: 12px 20px;
+    background: var(--accent);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+.skip-link:focus {
+    top: 16px;
+    outline: 3px solid var(--white);
+    outline-offset: 2px;
+}
